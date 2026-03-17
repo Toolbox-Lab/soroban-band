@@ -1,0 +1,13 @@
+[package]
+name = "soroban-orchestra-report"
+version = "0.1.0"
+edition = "2021"
+description = "Coverage and reporting for Soroban orchestra"
+
+[dependencies]
+soroban-orchestra-core = { path = "../soroban-orchestra-core" }
+serde.workspace = true
+serde_json.workspace = true
+askama.workspace = true
+dot_writer.workspace = true
+chrono.workspace = true

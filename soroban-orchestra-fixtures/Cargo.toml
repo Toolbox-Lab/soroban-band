@@ -1,0 +1,12 @@
+[package]
+name = "soroban-orchestra-fixtures"
+version = "0.1.0"
+edition = "2021"
+description = "Ready-to-use fixtures for Soroban orchestra"
+
+[dependencies]
+soroban-orchestra-core = { path = "../soroban-orchestra-core" }
+soroban-sdk.workspace = true
+rust_decimal.workspace = true
+num-traits.workspace = true
+serde.workspace = true

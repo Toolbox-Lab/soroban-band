@@ -1,0 +1,15 @@
+[package]
+name = "soroban-orchestra-proptest"
+version = "0.1.0"
+edition = "2021"
+description = "Property-based testing engine for Soroban orchestra"
+
+[dependencies]
+soroban-orchestra-core = { path = "../soroban-orchestra-core" }
+soroban-sdk.workspace = true
+proptest.workspace = true
+proptest-state-machine = { version = "0.3" }
+arbitrary.workspace = true
+rand.workspace = true
+rand_chacha.workspace = true
+serde.workspace = true

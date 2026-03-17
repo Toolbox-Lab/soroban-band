@@ -1,0 +1,14 @@
+[package]
+name = "soroban-orchestra-cli"
+version = "0.1.0"
+edition = "2021"
+description = "CLI tool for Soroban orchestra"
+
+[[bin]]
+name = "cargo-soroban-orchestra"
+path = "src/main.rs"
+
+[dependencies]
+soroban-orchestra-report = { path = "../soroban-orchestra-report" }
+clap.workspace = true
+anyhow.workspace = true

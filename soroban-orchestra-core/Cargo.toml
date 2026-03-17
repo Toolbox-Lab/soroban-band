@@ -1,0 +1,15 @@
+[package]
+name = "soroban-orchestra-core"
+version = "0.1.0"
+edition = "2021"
+description = "Orchestration engine for Soroban multi-contract testing"
+
+[dependencies]
+soroban-sdk.workspace = true
+stellar-xdr.workspace = true
+thiserror.workspace = true
+serde.workspace = true
+serde_json.workspace = true
+petgraph.workspace = true
+indexmap.workspace = true
+once_cell.workspace = true
