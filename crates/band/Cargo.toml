@@ -1,0 +1,19 @@
+[package]
+name = "soroban-band"
+version = "0.1.0"
+edition = "2021"
+description = "High-level multi-contract test harness for Soroban"
+
+[dependencies]
+soroban-band-core = { path = "../core" }
+soroban-band-fixtures = { path = "../fixtures" }
+soroban-band-proptest = { path = "../proptest", optional = true }
+soroban-band-macros = { path = "../macros", optional = true }
+soroban-band-report = { path = "../report", optional = true }
+
+[features]
+default = []
+full = ["proptest", "macros", "report"]
+proptest = ["dep:soroban-band-proptest"]
+macros = ["dep:soroban-band-macros"]
+report = ["dep:soroban-band-report"]

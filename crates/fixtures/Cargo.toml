@@ -1,11 +1,11 @@
 [package]
-name = "soroban-orchestra-fixtures"
+name = "soroban-band-fixtures"
 version = "0.1.0"
 edition = "2021"
-description = "Ready-to-use fixtures for Soroban orchestra"
+description = "Ready-to-use fixtures for Soroban band"
 
 [dependencies]
-soroban-orchestra-core = { path = "../soroban-orchestra-core" }
+soroban-band-core = { path = "../core" }
 soroban-sdk.workspace = true
 rust_decimal.workspace = true
 num-traits.workspace = true

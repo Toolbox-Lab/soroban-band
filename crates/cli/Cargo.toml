@@ -1,0 +1,14 @@
+[package]
+name = "soroban-band-cli"
+version = "0.1.0"
+edition = "2021"
+description = "CLI tool for Soroban band"
+
+[[bin]]
+name = "cargo-soroban-band"
+path = "src/main.rs"
+
+[dependencies]
+soroban-band-report = { path = "../report" }
+clap.workspace = true
+anyhow.workspace = true

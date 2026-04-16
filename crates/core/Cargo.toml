@@ -1,5 +1,5 @@
 [package]
-name = "soroban-orchestra-core"
+name = "soroban-band-core"
 version = "0.1.0"
 edition = "2021"
 description = "Orchestration engine for Soroban multi-contract testing"
