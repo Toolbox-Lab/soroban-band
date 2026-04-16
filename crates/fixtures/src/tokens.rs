@@ -1,5 +1,6 @@
 use soroban_band_core::BandEnv;
 use soroban_sdk::{Address, String};
+use soroban_sdk::testutils::Address as _;
 
 pub struct TokenFixture {
     pub address: Address,

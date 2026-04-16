@@ -1,4 +1,5 @@
 use soroban_sdk::Address;
+use soroban_sdk::testutils::Address as _;
 use soroban_band_core::BandEnv;
 
 pub struct AccountFixture {

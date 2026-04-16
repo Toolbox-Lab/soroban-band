@@ -1,9 +1,9 @@
-use soroban_sdk::{Address, Env, Symbol, Val, Vec};
+use soroban_sdk::{Env, Symbol, Val};
 use std::collections::HashMap;
 use petgraph::graph::DiGraph;
-use crate::auth::AuthTrace;
 
 /// Fluent builder for constructing multi-contract test environments.
+#[allow(dead_code)]
 pub struct BandEnvBuilder {
     pub env: Env,
     contracts: HashMap<String, ContractInfo>,
@@ -11,13 +11,15 @@ pub struct BandEnvBuilder {
     accounts: HashMap<String, AccountInfo>,
 }
 
+#[allow(dead_code)]
 struct ContractInfo {
     alias: String,
     wasm_hash: Option<[u8; 32]>,
     init_fn: Option<Symbol>,
-    init_args: Option<Vec<Val>>,
+    init_args: Option<std::vec::Vec<Val>>,
 }
 
+#[allow(dead_code)]
 struct AccountInfo {
     alias: String,
     balances: HashMap<String, i128>,
@@ -33,17 +35,17 @@ impl BandEnvBuilder {
         }
     }
 
-    pub fn register<T>(mut self, alias: &str) -> Self {
+    pub fn register<T>(self, _alias: &str) -> Self {
         // Implementation for registering contract T with alias
         self
     }
 
-    pub fn depends_on(mut self, contract: &str, dependencies: &[&str]) -> Self {
+    pub fn depends_on(self, _contract: &str, _dependencies: &[&str]) -> Self {
         // Implementation for building the dependency DAG
         self
     }
 
-    pub fn account(mut self, alias: &str) -> Self {
+    pub fn account(self, _alias: &str) -> Self {
         // Implementation for adding a named account
         self
     }

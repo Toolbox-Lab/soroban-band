@@ -9,5 +9,6 @@ soroban-band-core = { path = "../core" }
 serde.workspace = true
 serde_json.workspace = true
 askama.workspace = true
-dot_writer.workspace = true
+dot-writer.workspace = true
 chrono.workspace = true
+petgraph.workspace = true

@@ -13,7 +13,7 @@ impl CoverageTracker {
         }
     }
 
-    pub fn record_call(&mut self, caller: &str, callee: &str, function: &str) {
+    pub fn record_call(&mut self, _caller: &str, _callee: &str, _function: &str) {
         // Record contract interaction
     }
 
