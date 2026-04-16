@@ -1,4 +1,4 @@
-/// CLI for soroban-orchestra
+/// CLI for soroban-Band
 /// 
 /// Commands:
 /// - init: Scaffolds a new test suite
@@ -11,7 +11,7 @@ use clap::{Parser, Subcommand};
 #[command(name = "cargo")]
 #[command(bin_name = "cargo")]
 enum CargoCli {
-    SorobanOrchestra(Args),
+    SorobanBand(Args),
 }
 
 #[derive(Parser)]
@@ -29,10 +29,10 @@ enum Commands {
 }
 
 fn main() -> anyhow::Result<()> {
-    let CargoCli::SorobanOrchestra(args) = CargoCli::parse();
+    let CargoCli::SorobanBand(args) = CargoCli::parse();
     
     match args.command {
-        Commands::Init => println!("Initializing soroban-orchestra test suite..."),
+        Commands::Init => println!("Initializing soroban-Band test suite..."),
         Commands::Report => println!("Generating coverage report..."),
         Commands::Build => println!("Building contracts..."),
     }

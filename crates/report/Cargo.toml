@@ -1,11 +1,11 @@
 [package]
-name = "soroban-orchestra-report"
+name = "soroban-band-report"
 version = "0.1.0"
 edition = "2021"
-description = "Coverage and reporting for Soroban orchestra"
+description = "Coverage and reporting for Soroban band"
 
 [dependencies]
-soroban-orchestra-core = { path = "../soroban-orchestra-core" }
+soroban-band-core = { path = "../core" }
 serde.workspace = true
 serde_json.workspace = true
 askama.workspace = true

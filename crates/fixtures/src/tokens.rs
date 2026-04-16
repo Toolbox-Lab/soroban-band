@@ -1,4 +1,4 @@
-use soroban_orchestra_core::OrchestraEnv;
+use soroban_band_core::BandEnv;
 use soroban_sdk::{Address, String};
 
 pub struct TokenFixture {
@@ -6,7 +6,7 @@ pub struct TokenFixture {
 }
 
 impl TokenFixture {
-    pub fn new(env: &OrchestraEnv, name: String, symbol: String, decimals: u32) -> Self {
+    pub fn new(env: &BandEnv, name: String, symbol: String, decimals: u32) -> Self {
         // Mock deploy and setup token
         TokenFixture {
             address: Address::generate(&env.env),

@@ -1,13 +1,13 @@
 [workspace]
 resolver = "2"
 members = [
-    "soroban-orchestra",
-    "soroban-orchestra-core",
-    "soroban-orchestra-fixtures",
-    "soroban-orchestra-proptest",
-    "soroban-orchestra-macros",
-    "soroban-orchestra-report",
-    "soroban-orchestra-cli",
+    "crates/band",
+    "crates/core",
+    "crates/fixtures",
+    "crates/proptest",
+    "crates/macros",
+    "crates/report",
+    "crates/cli",
 ]
 
 [workspace.dependencies]

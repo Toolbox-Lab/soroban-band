@@ -1,6 +1,6 @@
-use soroban_orchestra_core::OrchestraEnv;
+use soroban_band_core::BandEnv;
 
-pub type InvariantFn = Box<dyn Fn(&OrchestraEnv) -> Result<(), InvariantViolation>>;
+pub type InvariantFn = Box<dyn Fn(&BandEnv) -> Result<(), InvariantViolation>>;
 
 pub struct InvariantViolation {
     pub msg: String,

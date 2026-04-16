@@ -4,7 +4,7 @@ use petgraph::graph::DiGraph;
 use crate::auth::AuthTrace;
 
 /// Fluent builder for constructing multi-contract test environments.
-pub struct OrchestraEnvBuilder {
+pub struct BandEnvBuilder {
     pub env: Env,
     contracts: HashMap<String, ContractInfo>,
     dependencies: DiGraph<String, ()>,
@@ -23,7 +23,7 @@ struct AccountInfo {
     balances: HashMap<String, i128>,
 }
 
-impl OrchestraEnvBuilder {
+impl BandEnvBuilder {
     pub fn new() -> Self {
         Self {
             env: Env::default(),
@@ -48,22 +48,22 @@ impl OrchestraEnvBuilder {
         self
     }
 
-    pub fn build(self) -> Result<OrchestraEnv, OrchestraError> {
+    pub fn build(self) -> Result<BandEnv, BandError> {
         // Implementation for topological sort, deployment, and validation
-        Ok(OrchestraEnv {
+        Ok(BandEnv {
             env: self.env,
             // ...
         })
     }
 }
 
-pub struct OrchestraEnv {
+pub struct BandEnv {
     pub env: Env,
     // ...
 }
 
 #[derive(thiserror::Error, Debug)]
-pub enum OrchestraError {
+pub enum BandError {
     #[error("Circular dependency detected in contract graph")]
     CircularDependency(String),
     #[error("Missing contract reference: {0}")]

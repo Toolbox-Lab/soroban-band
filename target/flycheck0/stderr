@@ -1,0 +1,11 @@
+error: failed to load manifest for workspace member `C:\projetcs\codezeus\soroban-band\crates\band`
+referenced by workspace at `C:\projetcs\codezeus\soroban-band\Cargo.toml`
+
+Caused by:
+  failed to load manifest for dependency `soroban-band-core`
+
+Caused by:
+  failed to read `C:\projetcs\codezeus\soroban-band\crates\soroban-band-core\Cargo.toml`
+
+Caused by:
+  The system cannot find the path specified. (os error 3)
