@@ -1,5 +1,5 @@
 use proptest::strategy::Strategy;
-use soroban_sdk::{Address, Symbol, Val};
+use soroban_sdk::Address;
 
 pub struct SorobanStrategies;
 

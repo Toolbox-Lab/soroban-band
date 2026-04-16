@@ -1,11 +1,363 @@
-error: failed to load manifest for workspace member `C:\projetcs\codezeus\soroban-band\crates\band`
-referenced by workspace at `C:\projetcs\codezeus\soroban-band\Cargo.toml`
+    Blocking waiting for file lock on build directory
+ 112.641203200s  INFO prepare_target{force=false package_id=soroban-band v0.1.0 (C:\projetcs\codezeus\soroban-band\crates\band) target="soroban_band"}: cargo::core::compiler::fingerprint: fingerprint error for soroban-band v0.1.0 (C:\projetcs\codezeus\soroban-band\crates\band)/Check { test: false }/TargetInner { name_inferred: true, ..: lib_target("soroban_band", ["lib"], "C:\\projetcs\\codezeus\\soroban-band\\crates\\band\\src\\lib.rs", Edition2021) }
+ 112.641371900s  INFO prepare_target{force=false package_id=soroban-band v0.1.0 (C:\projetcs\codezeus\soroban-band\crates\band) target="soroban_band"}: cargo::core::compiler::fingerprint:     err: failed to read `C:\projetcs\codezeus\soroban-band\target\debug\.fingerprint\soroban-band-5d15b2fc038ac64e\lib-soroban_band`
 
 Caused by:
-  failed to load manifest for dependency `soroban-band-core`
+    The system cannot find the file specified. (os error 2)
+
+Stack backtrace:
+   0: std::backtrace::Backtrace::create
+             at /rustc/e408947bfd200af42db322daf0fadfe7e26d3bd1/library\std\src\..\..\backtrace\src\backtrace/win64.rs:85:14
+   1: std::backtrace::Backtrace::capture
+             at /rustc/e408947bfd200af42db322daf0fadfe7e26d3bd1/library\std\src/backtrace.rs:296:9
+   2: <std::io::error::Error as anyhow::context::ext::StdError>::ext_context::<alloc::string::String>
+   3: cargo_util::paths::read
+   4: cargo::core::compiler::fingerprint::prepare_target
+   5: cargo::core::compiler::compile
+   6: <cargo::core::compiler::build_runner::BuildRunner>::compile
+   7: cargo::ops::cargo_compile::compile_ws
+   8: cargo::ops::cargo_compile::compile_with_exec
+   9: cargo::ops::cargo_compile::compile
+  10: cargo::commands::check::exec
+  11: <cargo::cli::Exec>::exec
+  12: cargo::cli::main
+  13: cargo::main
+  14: std::sys::backtrace::__rust_begin_short_backtrace::<fn(), ()>
+  15: std::rt::lang_start::<()>::{closure#0}
+  16: std::rt::lang_start_internal
+             at /rustc/e408947bfd200af42db322daf0fadfe7e26d3bd1/library\core\src\ops/function.rs:287:21
+  17: main
+  18: __tmainCRTStartup
+  19: mainCRTStartup
+  20: <unknown>
+  21: <unknown>
+ 112.864064300s  INFO prepare_target{force=false package_id=soroban-band-fixtures v0.1.0 (C:\projetcs\codezeus\soroban-band\crates\fixtures) target="soroban_band_fixtures"}: cargo::core::compiler::fingerprint: fingerprint error for soroban-band-fixtures v0.1.0 (C:\projetcs\codezeus\soroban-band\crates\fixtures)/Check { test: false }/TargetInner { name_inferred: true, ..: lib_target("soroban_band_fixtures", ["lib"], "C:\\projetcs\\codezeus\\soroban-band\\crates\\fixtures\\src\\lib.rs", Edition2021) }
+ 112.864119700s  INFO prepare_target{force=false package_id=soroban-band-fixtures v0.1.0 (C:\projetcs\codezeus\soroban-band\crates\fixtures) target="soroban_band_fixtures"}: cargo::core::compiler::fingerprint:     err: failed to read `C:\projetcs\codezeus\soroban-band\target\debug\.fingerprint\soroban-band-fixtures-50caf89a785f8e93\lib-soroban_band_fixtures`
 
 Caused by:
-  failed to read `C:\projetcs\codezeus\soroban-band\crates\soroban-band-core\Cargo.toml`
+    The system cannot find the file specified. (os error 2)
+
+Stack backtrace:
+   0: std::backtrace::Backtrace::create
+             at /rustc/e408947bfd200af42db322daf0fadfe7e26d3bd1/library\std\src\..\..\backtrace\src\backtrace/win64.rs:85:14
+   1: std::backtrace::Backtrace::capture
+             at /rustc/e408947bfd200af42db322daf0fadfe7e26d3bd1/library\std\src/backtrace.rs:296:9
+   2: <std::io::error::Error as anyhow::context::ext::StdError>::ext_context::<alloc::string::String>
+   3: cargo_util::paths::read
+   4: cargo::core::compiler::fingerprint::prepare_target
+   5: cargo::core::compiler::compile
+   6: cargo::core::compiler::compile
+   7: <cargo::core::compiler::build_runner::BuildRunner>::compile
+   8: cargo::ops::cargo_compile::compile_ws
+   9: cargo::ops::cargo_compile::compile_with_exec
+  10: cargo::ops::cargo_compile::compile
+  11: cargo::commands::check::exec
+  12: <cargo::cli::Exec>::exec
+  13: cargo::cli::main
+  14: cargo::main
+  15: std::sys::backtrace::__rust_begin_short_backtrace::<fn(), ()>
+  16: std::rt::lang_start::<()>::{closure#0}
+  17: std::rt::lang_start_internal
+             at /rustc/e408947bfd200af42db322daf0fadfe7e26d3bd1/library\core\src\ops/function.rs:287:21
+  18: main
+  19: __tmainCRTStartup
+  20: mainCRTStartup
+  21: <unknown>
+  22: <unknown>
+ 112.872406700s  INFO prepare_target{force=false package_id=soroban-token-sdk v21.5.0 target="soroban_token_sdk"}: cargo::core::compiler::fingerprint: fingerprint error for soroban-token-sdk v21.5.0/Check { test: false }/TargetInner { doctest: false, ..: lib_target("soroban_token_sdk", ["cdylib", "rlib"], "C:\\Users\\TCE HUB\\.cargo\\registry\\src\\index.crates.io-1949cf8c6b5b557f\\soroban-token-sdk-21.5.0\\src\\lib.rs", Edition2021) }
+ 112.872482100s  INFO prepare_target{force=false package_id=soroban-token-sdk v21.5.0 target="soroban_token_sdk"}: cargo::core::compiler::fingerprint:     err: failed to read `C:\projetcs\codezeus\soroban-band\target\debug\.fingerprint\soroban-token-sdk-470286fdf4202ead\lib-soroban_token_sdk`
 
 Caused by:
-  The system cannot find the path specified. (os error 3)
+    The system cannot find the file specified. (os error 2)
+
+Stack backtrace:
+   0: std::backtrace::Backtrace::create
+             at /rustc/e408947bfd200af42db322daf0fadfe7e26d3bd1/library\std\src\..\..\backtrace\src\backtrace/win64.rs:85:14
+   1: std::backtrace::Backtrace::capture
+             at /rustc/e408947bfd200af42db322daf0fadfe7e26d3bd1/library\std\src/backtrace.rs:296:9
+   2: <std::io::error::Error as anyhow::context::ext::StdError>::ext_context::<alloc::string::String>
+   3: cargo_util::paths::read
+   4: cargo::core::compiler::fingerprint::prepare_target
+   5: cargo::core::compiler::compile
+   6: cargo::core::compiler::compile
+   7: cargo::core::compiler::compile
+   8: <cargo::core::compiler::build_runner::BuildRunner>::compile
+   9: cargo::ops::cargo_compile::compile_ws
+  10: cargo::ops::cargo_compile::compile_with_exec
+  11: cargo::ops::cargo_compile::compile
+  12: cargo::commands::check::exec
+  13: <cargo::cli::Exec>::exec
+  14: cargo::cli::main
+  15: cargo::main
+  16: std::sys::backtrace::__rust_begin_short_backtrace::<fn(), ()>
+  17: std::rt::lang_start::<()>::{closure#0}
+  18: std::rt::lang_start_internal
+             at /rustc/e408947bfd200af42db322daf0fadfe7e26d3bd1/library\core\src\ops/function.rs:287:21
+  19: main
+  20: __tmainCRTStartup
+  21: mainCRTStartup
+  22: <unknown>
+  23: <unknown>
+ 112.875656200s  INFO prepare_target{force=false package_id=soroban-band v0.1.0 (C:\projetcs\codezeus\soroban-band\crates\band) target="soroban_band"}: cargo::core::compiler::fingerprint: fingerprint error for soroban-band v0.1.0 (C:\projetcs\codezeus\soroban-band\crates\band)/Check { test: true }/TargetInner { name_inferred: true, ..: lib_target("soroban_band", ["lib"], "C:\\projetcs\\codezeus\\soroban-band\\crates\\band\\src\\lib.rs", Edition2021) }
+ 112.875711300s  INFO prepare_target{force=false package_id=soroban-band v0.1.0 (C:\projetcs\codezeus\soroban-band\crates\band) target="soroban_band"}: cargo::core::compiler::fingerprint:     err: failed to read `C:\projetcs\codezeus\soroban-band\target\debug\.fingerprint\soroban-band-7f938721eb53056d\test-lib-soroban_band`
+
+Caused by:
+    The system cannot find the file specified. (os error 2)
+
+Stack backtrace:
+   0: std::backtrace::Backtrace::create
+             at /rustc/e408947bfd200af42db322daf0fadfe7e26d3bd1/library\std\src\..\..\backtrace\src\backtrace/win64.rs:85:14
+   1: std::backtrace::Backtrace::capture
+             at /rustc/e408947bfd200af42db322daf0fadfe7e26d3bd1/library\std\src/backtrace.rs:296:9
+   2: <std::io::error::Error as anyhow::context::ext::StdError>::ext_context::<alloc::string::String>
+   3: cargo_util::paths::read
+   4: cargo::core::compiler::fingerprint::prepare_target
+   5: cargo::core::compiler::compile
+   6: <cargo::core::compiler::build_runner::BuildRunner>::compile
+   7: cargo::ops::cargo_compile::compile_ws
+   8: cargo::ops::cargo_compile::compile_with_exec
+   9: cargo::ops::cargo_compile::compile
+  10: cargo::commands::check::exec
+  11: <cargo::cli::Exec>::exec
+  12: cargo::cli::main
+  13: cargo::main
+  14: std::sys::backtrace::__rust_begin_short_backtrace::<fn(), ()>
+  15: std::rt::lang_start::<()>::{closure#0}
+  16: std::rt::lang_start_internal
+             at /rustc/e408947bfd200af42db322daf0fadfe7e26d3bd1/library\core\src\ops/function.rs:287:21
+  17: main
+  18: __tmainCRTStartup
+  19: mainCRTStartup
+  20: <unknown>
+  21: <unknown>
+ 112.902376700s  INFO prepare_target{force=false package_id=soroban-band-cli v0.1.0 (C:\projetcs\codezeus\soroban-band\crates\cli) target="cargo-soroban-band"}: cargo::core::compiler::fingerprint: fingerprint error for soroban-band-cli v0.1.0 (C:\projetcs\codezeus\soroban-band\crates\cli)/Check { test: false }/TargetInner { name: "cargo-soroban-band", doc: true, ..: with_path("C:\\projetcs\\codezeus\\soroban-band\\crates\\cli\\src\\main.rs", Edition2021) }
+ 112.902427500s  INFO prepare_target{force=false package_id=soroban-band-cli v0.1.0 (C:\projetcs\codezeus\soroban-band\crates\cli) target="cargo-soroban-band"}: cargo::core::compiler::fingerprint:     err: failed to read `C:\projetcs\codezeus\soroban-band\target\debug\.fingerprint\soroban-band-cli-7487dda6855e6d95\bin-cargo-soroban-band`
+
+Caused by:
+    The system cannot find the file specified. (os error 2)
+
+Stack backtrace:
+   0: std::backtrace::Backtrace::create
+             at /rustc/e408947bfd200af42db322daf0fadfe7e26d3bd1/library\std\src\..\..\backtrace\src\backtrace/win64.rs:85:14
+   1: std::backtrace::Backtrace::capture
+             at /rustc/e408947bfd200af42db322daf0fadfe7e26d3bd1/library\std\src/backtrace.rs:296:9
+   2: <std::io::error::Error as anyhow::context::ext::StdError>::ext_context::<alloc::string::String>
+   3: cargo_util::paths::read
+   4: cargo::core::compiler::fingerprint::prepare_target
+   5: cargo::core::compiler::compile
+   6: <cargo::core::compiler::build_runner::BuildRunner>::compile
+   7: cargo::ops::cargo_compile::compile_ws
+   8: cargo::ops::cargo_compile::compile_with_exec
+   9: cargo::ops::cargo_compile::compile
+  10: cargo::commands::check::exec
+  11: <cargo::cli::Exec>::exec
+  12: cargo::cli::main
+  13: cargo::main
+  14: std::sys::backtrace::__rust_begin_short_backtrace::<fn(), ()>
+  15: std::rt::lang_start::<()>::{closure#0}
+  16: std::rt::lang_start_internal
+             at /rustc/e408947bfd200af42db322daf0fadfe7e26d3bd1/library\core\src\ops/function.rs:287:21
+  17: main
+  18: __tmainCRTStartup
+  19: mainCRTStartup
+  20: <unknown>
+  21: <unknown>
+ 112.929320700s  INFO prepare_target{force=false package_id=soroban-band-cli v0.1.0 (C:\projetcs\codezeus\soroban-band\crates\cli) target="cargo-soroban-band"}: cargo::core::compiler::fingerprint: fingerprint error for soroban-band-cli v0.1.0 (C:\projetcs\codezeus\soroban-band\crates\cli)/Check { test: true }/TargetInner { name: "cargo-soroban-band", doc: true, ..: with_path("C:\\projetcs\\codezeus\\soroban-band\\crates\\cli\\src\\main.rs", Edition2021) }
+ 112.929389700s  INFO prepare_target{force=false package_id=soroban-band-cli v0.1.0 (C:\projetcs\codezeus\soroban-band\crates\cli) target="cargo-soroban-band"}: cargo::core::compiler::fingerprint:     err: failed to read `C:\projetcs\codezeus\soroban-band\target\debug\.fingerprint\soroban-band-cli-548e07d8bfa581d0\test-bin-cargo-soroban-band`
+
+Caused by:
+    The system cannot find the file specified. (os error 2)
+
+Stack backtrace:
+   0: std::backtrace::Backtrace::create
+             at /rustc/e408947bfd200af42db322daf0fadfe7e26d3bd1/library\std\src\..\..\backtrace\src\backtrace/win64.rs:85:14
+   1: std::backtrace::Backtrace::capture
+             at /rustc/e408947bfd200af42db322daf0fadfe7e26d3bd1/library\std\src/backtrace.rs:296:9
+   2: <std::io::error::Error as anyhow::context::ext::StdError>::ext_context::<alloc::string::String>
+   3: cargo_util::paths::read
+   4: cargo::core::compiler::fingerprint::prepare_target
+   5: cargo::core::compiler::compile
+   6: <cargo::core::compiler::build_runner::BuildRunner>::compile
+   7: cargo::ops::cargo_compile::compile_ws
+   8: cargo::ops::cargo_compile::compile_with_exec
+   9: cargo::ops::cargo_compile::compile
+  10: cargo::commands::check::exec
+  11: <cargo::cli::Exec>::exec
+  12: cargo::cli::main
+  13: cargo::main
+  14: std::sys::backtrace::__rust_begin_short_backtrace::<fn(), ()>
+  15: std::rt::lang_start::<()>::{closure#0}
+  16: std::rt::lang_start_internal
+             at /rustc/e408947bfd200af42db322daf0fadfe7e26d3bd1/library\core\src\ops/function.rs:287:21
+  17: main
+  18: __tmainCRTStartup
+  19: mainCRTStartup
+  20: <unknown>
+  21: <unknown>
+ 112.932101600s  INFO prepare_target{force=false package_id=soroban-band-core v0.1.0 (C:\projetcs\codezeus\soroban-band\crates\core) target="soroban_band_core"}: cargo::core::compiler::fingerprint: fingerprint error for soroban-band-core v0.1.0 (C:\projetcs\codezeus\soroban-band\crates\core)/Check { test: true }/TargetInner { name_inferred: true, ..: lib_target("soroban_band_core", ["lib"], "C:\\projetcs\\codezeus\\soroban-band\\crates\\core\\src\\lib.rs", Edition2021) }
+ 112.932197100s  INFO prepare_target{force=false package_id=soroban-band-core v0.1.0 (C:\projetcs\codezeus\soroban-band\crates\core) target="soroban_band_core"}: cargo::core::compiler::fingerprint:     err: failed to read `C:\projetcs\codezeus\soroban-band\target\debug\.fingerprint\soroban-band-core-ee3084883d640b99\test-lib-soroban_band_core`
+
+Caused by:
+    The system cannot find the file specified. (os error 2)
+
+Stack backtrace:
+   0: std::backtrace::Backtrace::create
+             at /rustc/e408947bfd200af42db322daf0fadfe7e26d3bd1/library\std\src\..\..\backtrace\src\backtrace/win64.rs:85:14
+   1: std::backtrace::Backtrace::capture
+             at /rustc/e408947bfd200af42db322daf0fadfe7e26d3bd1/library\std\src/backtrace.rs:296:9
+   2: <std::io::error::Error as anyhow::context::ext::StdError>::ext_context::<alloc::string::String>
+   3: cargo_util::paths::read
+   4: cargo::core::compiler::fingerprint::prepare_target
+   5: cargo::core::compiler::compile
+   6: <cargo::core::compiler::build_runner::BuildRunner>::compile
+   7: cargo::ops::cargo_compile::compile_ws
+   8: cargo::ops::cargo_compile::compile_with_exec
+   9: cargo::ops::cargo_compile::compile
+  10: cargo::commands::check::exec
+  11: <cargo::cli::Exec>::exec
+  12: cargo::cli::main
+  13: cargo::main
+  14: std::sys::backtrace::__rust_begin_short_backtrace::<fn(), ()>
+  15: std::rt::lang_start::<()>::{closure#0}
+  16: std::rt::lang_start_internal
+             at /rustc/e408947bfd200af42db322daf0fadfe7e26d3bd1/library\core\src\ops/function.rs:287:21
+  17: main
+  18: __tmainCRTStartup
+  19: mainCRTStartup
+  20: <unknown>
+  21: <unknown>
+ 112.935922400s  INFO prepare_target{force=false package_id=soroban-band-fixtures v0.1.0 (C:\projetcs\codezeus\soroban-band\crates\fixtures) target="soroban_band_fixtures"}: cargo::core::compiler::fingerprint: fingerprint error for soroban-band-fixtures v0.1.0 (C:\projetcs\codezeus\soroban-band\crates\fixtures)/Check { test: true }/TargetInner { name_inferred: true, ..: lib_target("soroban_band_fixtures", ["lib"], "C:\\projetcs\\codezeus\\soroban-band\\crates\\fixtures\\src\\lib.rs", Edition2021) }
+ 112.936067100s  INFO prepare_target{force=false package_id=soroban-band-fixtures v0.1.0 (C:\projetcs\codezeus\soroban-band\crates\fixtures) target="soroban_band_fixtures"}: cargo::core::compiler::fingerprint:     err: failed to read `C:\projetcs\codezeus\soroban-band\target\debug\.fingerprint\soroban-band-fixtures-f69c88fc5427298c\test-lib-soroban_band_fixtures`
+
+Caused by:
+    The system cannot find the file specified. (os error 2)
+
+Stack backtrace:
+   0: std::backtrace::Backtrace::create
+             at /rustc/e408947bfd200af42db322daf0fadfe7e26d3bd1/library\std\src\..\..\backtrace\src\backtrace/win64.rs:85:14
+   1: std::backtrace::Backtrace::capture
+             at /rustc/e408947bfd200af42db322daf0fadfe7e26d3bd1/library\std\src/backtrace.rs:296:9
+   2: <std::io::error::Error as anyhow::context::ext::StdError>::ext_context::<alloc::string::String>
+   3: cargo_util::paths::read
+   4: cargo::core::compiler::fingerprint::prepare_target
+   5: cargo::core::compiler::compile
+   6: <cargo::core::compiler::build_runner::BuildRunner>::compile
+   7: cargo::ops::cargo_compile::compile_ws
+   8: cargo::ops::cargo_compile::compile_with_exec
+   9: cargo::ops::cargo_compile::compile
+  10: cargo::commands::check::exec
+  11: <cargo::cli::Exec>::exec
+  12: cargo::cli::main
+  13: cargo::main
+  14: std::sys::backtrace::__rust_begin_short_backtrace::<fn(), ()>
+  15: std::rt::lang_start::<()>::{closure#0}
+  16: std::rt::lang_start_internal
+             at /rustc/e408947bfd200af42db322daf0fadfe7e26d3bd1/library\core\src\ops/function.rs:287:21
+  17: main
+  18: __tmainCRTStartup
+  19: mainCRTStartup
+  20: <unknown>
+  21: <unknown>
+ 112.952021000s  INFO prepare_target{force=false package_id=soroban-band-macros v0.1.0 (C:\projetcs\codezeus\soroban-band\crates\macros) target="soroban_band_macros"}: cargo::core::compiler::fingerprint: fingerprint error for soroban-band-macros v0.1.0 (C:\projetcs\codezeus\soroban-band\crates\macros)/Check { test: true }/TargetInner { name_inferred: true, for_host: true, proc_macro: true, ..: lib_target("soroban_band_macros", ["proc-macro"], "C:\\projetcs\\codezeus\\soroban-band\\crates\\macros\\src\\lib.rs", Edition2021) }
+ 112.952125300s  INFO prepare_target{force=false package_id=soroban-band-macros v0.1.0 (C:\projetcs\codezeus\soroban-band\crates\macros) target="soroban_band_macros"}: cargo::core::compiler::fingerprint:     err: failed to read `C:\projetcs\codezeus\soroban-band\target\debug\.fingerprint\soroban-band-macros-15e75ae4e3e2829b\test-lib-soroban_band_macros`
+
+Caused by:
+    The system cannot find the file specified. (os error 2)
+
+Stack backtrace:
+   0: std::backtrace::Backtrace::create
+             at /rustc/e408947bfd200af42db322daf0fadfe7e26d3bd1/library\std\src\..\..\backtrace\src\backtrace/win64.rs:85:14
+   1: std::backtrace::Backtrace::capture
+             at /rustc/e408947bfd200af42db322daf0fadfe7e26d3bd1/library\std\src/backtrace.rs:296:9
+   2: <std::io::error::Error as anyhow::context::ext::StdError>::ext_context::<alloc::string::String>
+   3: cargo_util::paths::read
+   4: cargo::core::compiler::fingerprint::prepare_target
+   5: cargo::core::compiler::compile
+   6: <cargo::core::compiler::build_runner::BuildRunner>::compile
+   7: cargo::ops::cargo_compile::compile_ws
+   8: cargo::ops::cargo_compile::compile_with_exec
+   9: cargo::ops::cargo_compile::compile
+  10: cargo::commands::check::exec
+  11: <cargo::cli::Exec>::exec
+  12: cargo::cli::main
+  13: cargo::main
+  14: std::sys::backtrace::__rust_begin_short_backtrace::<fn(), ()>
+  15: std::rt::lang_start::<()>::{closure#0}
+  16: std::rt::lang_start_internal
+             at /rustc/e408947bfd200af42db322daf0fadfe7e26d3bd1/library\core\src\ops/function.rs:287:21
+  17: main
+  18: __tmainCRTStartup
+  19: mainCRTStartup
+  20: <unknown>
+  21: <unknown>
+ 112.981550800s  INFO prepare_target{force=false package_id=soroban-band-proptest v0.1.0 (C:\projetcs\codezeus\soroban-band\crates\proptest) target="soroban_band_proptest"}: cargo::core::compiler::fingerprint: fingerprint error for soroban-band-proptest v0.1.0 (C:\projetcs\codezeus\soroban-band\crates\proptest)/Check { test: true }/TargetInner { name_inferred: true, ..: lib_target("soroban_band_proptest", ["lib"], "C:\\projetcs\\codezeus\\soroban-band\\crates\\proptest\\src\\lib.rs", Edition2021) }
+ 112.981614000s  INFO prepare_target{force=false package_id=soroban-band-proptest v0.1.0 (C:\projetcs\codezeus\soroban-band\crates\proptest) target="soroban_band_proptest"}: cargo::core::compiler::fingerprint:     err: failed to read `C:\projetcs\codezeus\soroban-band\target\debug\.fingerprint\soroban-band-proptest-cb1ce2e77461725b\test-lib-soroban_band_proptest`
+
+Caused by:
+    The system cannot find the file specified. (os error 2)
+
+Stack backtrace:
+   0: std::backtrace::Backtrace::create
+             at /rustc/e408947bfd200af42db322daf0fadfe7e26d3bd1/library\std\src\..\..\backtrace\src\backtrace/win64.rs:85:14
+   1: std::backtrace::Backtrace::capture
+             at /rustc/e408947bfd200af42db322daf0fadfe7e26d3bd1/library\std\src/backtrace.rs:296:9
+   2: <std::io::error::Error as anyhow::context::ext::StdError>::ext_context::<alloc::string::String>
+   3: cargo_util::paths::read
+   4: cargo::core::compiler::fingerprint::prepare_target
+   5: cargo::core::compiler::compile
+   6: <cargo::core::compiler::build_runner::BuildRunner>::compile
+   7: cargo::ops::cargo_compile::compile_ws
+   8: cargo::ops::cargo_compile::compile_with_exec
+   9: cargo::ops::cargo_compile::compile
+  10: cargo::commands::check::exec
+  11: <cargo::cli::Exec>::exec
+  12: cargo::cli::main
+  13: cargo::main
+  14: std::sys::backtrace::__rust_begin_short_backtrace::<fn(), ()>
+  15: std::rt::lang_start::<()>::{closure#0}
+  16: std::rt::lang_start_internal
+             at /rustc/e408947bfd200af42db322daf0fadfe7e26d3bd1/library\core\src\ops/function.rs:287:21
+  17: main
+  18: __tmainCRTStartup
+  19: mainCRTStartup
+  20: <unknown>
+  21: <unknown>
+ 112.986055000s  INFO prepare_target{force=false package_id=soroban-band-report v0.1.0 (C:\projetcs\codezeus\soroban-band\crates\report) target="soroban_band_report"}: cargo::core::compiler::fingerprint: fingerprint error for soroban-band-report v0.1.0 (C:\projetcs\codezeus\soroban-band\crates\report)/Check { test: true }/TargetInner { name_inferred: true, ..: lib_target("soroban_band_report", ["lib"], "C:\\projetcs\\codezeus\\soroban-band\\crates\\report\\src\\lib.rs", Edition2021) }
+ 112.986311700s  INFO prepare_target{force=false package_id=soroban-band-report v0.1.0 (C:\projetcs\codezeus\soroban-band\crates\report) target="soroban_band_report"}: cargo::core::compiler::fingerprint:     err: failed to read `C:\projetcs\codezeus\soroban-band\target\debug\.fingerprint\soroban-band-report-0617604fd66f1f73\test-lib-soroban_band_report`
+
+Caused by:
+    The system cannot find the file specified. (os error 2)
+
+Stack backtrace:
+   0: std::backtrace::Backtrace::create
+             at /rustc/e408947bfd200af42db322daf0fadfe7e26d3bd1/library\std\src\..\..\backtrace\src\backtrace/win64.rs:85:14
+   1: std::backtrace::Backtrace::capture
+             at /rustc/e408947bfd200af42db322daf0fadfe7e26d3bd1/library\std\src/backtrace.rs:296:9
+   2: <std::io::error::Error as anyhow::context::ext::StdError>::ext_context::<alloc::string::String>
+   3: cargo_util::paths::read
+   4: cargo::core::compiler::fingerprint::prepare_target
+   5: cargo::core::compiler::compile
+   6: <cargo::core::compiler::build_runner::BuildRunner>::compile
+   7: cargo::ops::cargo_compile::compile_ws
+   8: cargo::ops::cargo_compile::compile_with_exec
+   9: cargo::ops::cargo_compile::compile
+  10: cargo::commands::check::exec
+  11: <cargo::cli::Exec>::exec
+  12: cargo::cli::main
+  13: cargo::main
+  14: std::sys::backtrace::__rust_begin_short_backtrace::<fn(), ()>
+  15: std::rt::lang_start::<()>::{closure#0}
+  16: std::rt::lang_start_internal
+             at /rustc/e408947bfd200af42db322daf0fadfe7e26d3bd1/library\core\src\ops/function.rs:287:21
+  17: main
+  18: __tmainCRTStartup
+  19: mainCRTStartup
+  20: <unknown>
+  21: <unknown>
+    Checking soroban-token-sdk v21.5.0
+    Checking soroban-band-report v0.1.0 (C:\projetcs\codezeus\soroban-band\crates\report)
+    Checking soroban-band-core v0.1.0 (C:\projetcs\codezeus\soroban-band\crates\core)
+    Checking soroban-band-macros v0.1.0 (C:\projetcs\codezeus\soroban-band\crates\macros)
+    Checking soroban-band-cli v0.1.0 (C:\projetcs\codezeus\soroban-band\crates\cli)
+    Checking soroban-band-proptest v0.1.0 (C:\projetcs\codezeus\soroban-band\crates\proptest)
+error: could not compile `soroban-token-sdk` (lib) due to 2 previous errors

@@ -1,27 +1,27 @@
-use soroban_sdk::{Address, Symbol, Val, Vec};
+use soroban_sdk::{Address, Symbol, Val};
 
 /// A single node in the authorization tree.
-#[derive(Debug, Clone, serde::Serialize)]
+#[derive(Debug, Clone)]
 pub struct AuthNode {
     pub contract_alias: String,
     pub contract_address: Address,
     pub function_name: Symbol,
-    pub auth_args: Option<Vec<Val>>,
+    pub auth_args: Option<std::vec::Vec<Val>>,
     pub principal: Address,
     pub result: AuthResult,
-    pub children: Vec<AuthNode>,
+    pub children: std::vec::Vec<AuthNode>,
 }
 
-#[derive(Debug, Clone, PartialEq, serde::Serialize)]
+#[derive(Debug, Clone)]
 pub enum AuthResult {
     Approved,
     Denied(AuthDenialReason),
 }
 
-#[derive(Debug, Clone, PartialEq, serde::Serialize)]
+#[derive(Debug, Clone)]
 pub enum AuthDenialReason {
     MissingAuth { principal: Address },
-    ArgMismatch { expected: Vec<Val>, got: Vec<Val> },
+    ArgMismatch { expected: std::vec::Vec<Val>, got: std::vec::Vec<Val> },
     AlreadyConsumed,
     WrongContractOrFunction {
         expected_contract: Address,
@@ -29,11 +29,11 @@ pub enum AuthDenialReason {
     },
 }
 
-#[derive(Debug, Clone, serde::Serialize)]
+#[derive(Debug, Clone)]
 pub struct AuthTrace {
     pub root: AuthNode,
-    pub all_nodes: Vec<AuthNode>,
-    pub unused_auth_entries: Vec<Address>,
+    pub all_nodes: std::vec::Vec<AuthNode>,
+    pub unused_auth_entries: std::vec::Vec<Address>,
 }
 
 impl AuthTrace {
