@@ -152,7 +152,7 @@ Contributions are welcome. Band is designed to grow with the Soroban ecosystem, 
 **Getting started:**
 
 ```bash
-git clone https://github.com/your-org/soroban-band.git
+git clone https://https://github.com/Toolbox-Lab/soroban-band.git
 cd soroban-band
 cargo test --workspace --all-features
 ```
